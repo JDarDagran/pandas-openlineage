@@ -1,0 +1,64 @@
+[
+    {
+        "eventTime": "2024-11-30T22:14:00.672071",
+        "eventType": "START",
+        "inputs": [],
+        "job": {
+            "facets": {
+                "jobType": {
+                    "_producer": "http://github.com/JDarDagran/pandas-openlineage",
+                    "_schemaURL": "https://openlineage.io/spec/facets/2-0-3/JobTypeJobFacet.json#/$defs/JobTypeJobFacet",
+                    "integration": "PANDAS",
+                    "jobType": "TASK",
+                    "processingType": "BATCH"
+                }
+            },
+            "name": "examples/s3_example.py",
+            "namespace": "pandas"
+        },
+        "outputs": [],
+        "producer": "http://github.com/JDarDagran/pandas-openlineage",
+        "run": {
+            "facets": {},
+            "runId": "01937eec-6060-7dff-b6bb-2909636d2fc3"
+        },
+        "schemaURL": "https://openlineage.io/spec/2-0-2/OpenLineage.json#/$defs/RunEvent"
+    },
+    {
+        "eventTime": "2024-11-30T22:14:25.636432",
+        "eventType": "COMPLETE",
+        "inputs": [
+            {
+                "facets": {},
+                "name": "regression.csv",
+                "namespace": "s3://air-example-data"
+            }
+        ],
+        "job": {
+            "facets": {
+                "jobType": {
+                    "_producer": "http://github.com/JDarDagran/pandas-openlineage",
+                    "_schemaURL": "https://openlineage.io/spec/facets/2-0-3/JobTypeJobFacet.json#/$defs/JobTypeJobFacet",
+                    "integration": "PANDAS",
+                    "jobType": "TASK",
+                    "processingType": "BATCH"
+                }
+            },
+            "name": "examples/s3_example.py",
+            "namespace": "pandas"
+        },
+        "outputs": [
+            {
+                "facets": {},
+                "name": "/tmp/test.csv",
+                "namespace": "file://"
+            }
+        ],
+        "producer": "http://github.com/JDarDagran/pandas-openlineage",
+        "run": {
+            "facets": {},
+            "runId": "01937eec-6060-7dff-b6bb-2909636d2fc3"
+        },
+        "schemaURL": "https://openlineage.io/spec/2-0-2/OpenLineage.json#/$defs/RunEvent"
+    }
+]
